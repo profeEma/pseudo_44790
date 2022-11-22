@@ -1,0 +1,86 @@
+/* Nos permite declarar y definir variables */
+:root {
+	--fondoPrimario:lightgreen;
+	--colorOscuro: #1A1E21;
+	--azulPrimario: #3860EC;
+	--azulSecundario: #2247ce;
+}
+
+/* var(--nombreVariableDeclarada); nos permite reutilizar una variable del root */
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.boton {
+	width: 100%;
+	background: var(--azulPrimario);
+	display: inline-block;
+	padding: 25px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	transition: .3s all;
+}
+
+.boton:hover {
+	background: var(--azulSecundario);
+}
+
+
+/* pseudo */
+/* Selecciona el elemento que tiene el foco. */
+.formulario .nombre:focus {
+	border: 3px solid red;
+	background-color: yellow;
+}
+/* Selecciona elementos de la interfaz de usuario que están en estado inactivo. */
+.formulario .dis:disabled{
+	background-color: red;
+	font-size:20px;
+}
+/* Selecciona un elemento como <input>, en un estado válido. */
+.formulario .correo:valid{
+	background: yellow;
+	border: none;
+}
+/* Selecciona un elemento, como por ejemplo un <input>, cuyo estado es no válido. */
+.formulario .correo:invalid{
+	background: red;
+}
+/* Selecciona un elemento cuyo valor se encuentra dentro de un rango de valores determinado. */
+.formulario .edad:in-range{
+	background: lightgreen;
+	border: none;
+}
+/* Selecciona un elemento cuyo valor está fuera de rango. */
+.formulario .edad:out-of-range{
+	background: red;
+	border: none;
+}
+/* Selecciona los elementos de formulario que son necesarios. */
+.formulario .mensaje:required{
+	border: 2px solid yellow;
+}

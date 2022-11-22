@@ -1,0 +1,95 @@
+/* VARIABLES CSS */
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+	--colorPrimario: yellow;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* PSEUDO */
+/* Selecciona un elemento cuando el usuario pasa el cursos por encima de una etiqueta a */
+a:hover{
+	background-color: red;
+	color:white;
+}
+/* Selecciona un elemento cuando el usuario lo activa (por ejemplo, con un clic). */
+a:active{
+	background-color:blue;
+	font-size: 40px;
+}
+/* Selecciona los enlaces visitados. */
+a:visited{
+	color:orange;
+}
+/* parrafos */
+/* Selecciona el primero entre elementos hermanos, en este caso el primer p */
+.parrafos p:first-child{
+	background-color: lightskyblue;
+	color: red;
+	font-size:1.5rem;
+}
+/* Selecciona el último elemento de entre sus elementos hermanos, en este caso el último p */
+.parrafos p:last-child{
+	background-color: yellow;
+	color:black;
+	font-size:1.5rem;
+}
+/* elementos */
+
+/* lista */
+/* Selecciona elementos de entre una lista de elementos hermanos. Los elementos hermanos están relacionados por una fórmula del tipo an + b  */
+.lista li:nth-child(2n){
+	background-color: black;
+	color: white;
+}
+/* Selecciona elementos de entre una lista de elementos hermanos, contando hacia atrás desde el final. Los elementos hermanos están relacionados por una fórmula del tipo an+b  */
+/* .lista li:nth-last-child(2n){
+	background-color: grey;
+	color: white;
+} */
